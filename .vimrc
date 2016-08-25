@@ -197,8 +197,8 @@ map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>k
-map <C-k> <C-W>j
-map <C-h> <C-W>h
+map <C-k> <C-W>f
+map <C-h> <C-W>j
 map <C-l> <C-W>l
 :imap jk <Esc>
 
