@@ -11,7 +11,7 @@ if __name__ == '__main__':
       print('reading rn')
       sys.stdout.flush()
       while(not stop_event.is_set()):
-        raw_data = serial_port.read(size=size)
+        raw_data = serial_port.read(size=size) #not thread safe if timeout=None (infinit)
         print()
         print ("raw data: ", raw_data)
         sys.stdout.flush()
