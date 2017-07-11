@@ -15,17 +15,10 @@ def process_func():
   flush()
   time.sleep(3)
 
-
-def process_func2():
-  '''
-  Multiprocessing cannot share the same code and glocal variables
-  '''
-  print('processing2....')
-  flush()
-  time.sleep(3)
-
-
 if __name__ == '__main__':
+
+  print("entering main...")
+  flush()
 
   def thread_func(stop_event):
     '''
@@ -46,7 +39,7 @@ if __name__ == '__main__':
   #t2_stop_event = threading.Event()
   #t2 = threading.Thread(name='t2', target=hey, args=(t2_stop_event, ))
   p1 = multiprocessing.Process(target=process_func)
-  p2 = multiprocessing.Process(target=process_func2)
+  p2 = multiprocessing.Process(target=process_func)
 
   print('starting threads/processes')
   flush()
