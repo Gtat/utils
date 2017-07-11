@@ -26,7 +26,7 @@ if __name__ == '__main__':
   for dev in devs:
       print("\t", dev.device)
 
-  com = str(input("which port do you want to open> "))
+  com = str(input("which port do you want to open (type COM36)> "))
   baudrate = int(input("what is the baudrate> "))
   read_timeout = int(input("what is read timeout (input 0 to wait forever)> "))
   if (read_timeout == 0):
